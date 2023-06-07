@@ -8,8 +8,9 @@
 
 main{
     display: flex;
-
-
+    /*flex-direction: column;
+    justify-content: center;
+    gap: 16px;*/
 }
 
 /*Configuración del contenedor grid*/
@@ -46,8 +47,8 @@ main{
     display: flex;
     width: 100%;
     height: 100%;
-    justify-content: space-around;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
 }
 
 #navegacion > ul > li{
@@ -107,7 +108,7 @@ main{
 #container1 {
     display: grid;
     grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
-    grid-template-rows: 50px 50px 50px;
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas: 
       ". . . . . hijo22 hijo55 ."
       "hijo44 hijo33 . . . . hijo11 ."
@@ -120,6 +121,7 @@ main{
 
 #hijo11{
     grid-area: hijo11;
+    background-color: antiquewhite;
 }
 #hijo22{
     grid-area: hijo22;
@@ -158,7 +160,7 @@ main{
     "imagen5 imagen5 imagen5 imagen5 imagen5 imagen5 imagen5 imagen5 . . imagen6 imagen6 imagen6 imagen6 imagen6 imagen6 imagen6 imagen6"
     "imagen5 imagen5 imagen5 imagen5 imagen5 imagen5 imagen5 imagen5 . . imagen6 imagen6 imagen6 imagen6 imagen6 imagen6 imagen6 imagen6"
     ". . . . . . . . . . . . . . . . . .";
-    width: 600px;
+    width: 380px;
     height: 600px;
   }
   
@@ -184,4 +186,49 @@ main{
   }
   #imagen6 {
     grid-area: imagen6;
+  }
+
+  /*Media queries definenconfiguraciones de estilos, dependiendo de un rango de resoluciones (min px a un max px)*/
+  /*breakpoints: son un rango de resoluciones (min px a un max px)*/
+
+  /*mobile first*/
+  /*mis dispositivos moviles siemore partiran de 400px minimo*/
+
+  /*mobiles-celulares*/
+  /*celulares: min 400px - default de 400px hasta 719px*/
+  /*tablets: 720px de 720px a 1023px */
+  /*desktop : 1024px de 1024px a 1199px*/
+  /*pantallas: 1200px*/
+
+  @media all {
+    
+  }
+
+  @media print {
+    
+  }
+
+  @media screen and (min-width: 720px) and (max-width: 1023px){
+    #galeria{
+        width: 719px;
+        background-color: aquamarine;
+    }
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1199px){
+    #galeria{
+        width: 1023px;
+    }
+    #imagen3 {
+        grid-area: imagen4;
+      }
+    #imagen4 {
+        grid-area: imagen3;
+    }
+  }
+
+  @media screen and (min-width: 1200px){
+    #galeria{
+        width: 1200px;
+    }
   }
