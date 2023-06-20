@@ -208,14 +208,14 @@ main{
     
   }
 
-  @media screen and (min-width: 720px) and (max-width: 1023px){
+  /*@media screen and (min-width: 720px) and (max-width: 1023px){
     #galeria{
         width: 719px;
         background-color: aquamarine;
     }
-  }
+  }*/
 
-  @media screen and (min-width: 1024px) and (max-width: 1199px){
+ /* @media screen and (min-width: 1024px) and (max-width: 1199px){
     #galeria{
         width: 1023px;
     }
@@ -225,10 +225,10 @@ main{
     #imagen4 {
         grid-area: imagen3;
     }
-  }
+  }*/
 
-  @media screen and (min-width: 1200px){
+  /*@media screen and (min-width: 1200px){
     #galeria{
         width: 1200px;
     }
-  }
+  }*/
